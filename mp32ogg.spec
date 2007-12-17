@@ -10,7 +10,6 @@ Source0:	mp32ogg_%{fver}.tar.bz2
 Requires:	perl mpg123 vorbis-tools
 BuildRequires:	perl perl-MP3-Info perl-String-ShellQuote
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 # Author: Nathan Walp <faceprint@faceprint.com>
 
 %description
