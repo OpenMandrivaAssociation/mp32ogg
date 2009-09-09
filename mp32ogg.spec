@@ -1,17 +1,27 @@
 %define fver 0.11-8
-Summary:	Convert mp3 music files to ogg music files
+
 Name:		mp32ogg
 Version:	0.11
-Release:	%mkrel 10
+Release:	%mkrel 11
+
+Summary:	Convert mp3 music files to ogg music files
 License:	Artistic
-Url:		http://packages.debian.org/unstable/sound/mp32ogg
 Group:		Sound
-Source0:	mp32ogg_%{fver}.tar.bz2
-Requires:	perl mpg123 vorbis-tools
-BuildRequires:	perl perl-MP3-Info perl-String-ShellQuote
-BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 # Author: Nathan Walp <faceprint@faceprint.com>
+Url:		http://packages.debian.org/unstable/sound/mp32ogg
+Source0:	mp32ogg_%{fver}.tar.bz2
+Patch0:     mp32ogg-0.11-force-filename-stringification.mp3
+
+BuildRequires: perl
+BuildRequires: perl(MP3::Info)
+BuildRequires: perl(String::ShellQuote)
+
+BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
+
+Requires: mpg123
+Requires: perl
+Requires: vorbis-tools
 
 %description
 Perl script to convert MP3 files into Ogg Vorbis format. It is able to
@@ -20,6 +30,8 @@ optionally rename them based on those tags.
 
 %prep
 %setup -q -n %name
+# fix https://qa.mandriva.com/show_bug.cgi?id=53477
+%patch0 -p0
 
 %install
 rm -rf %{buildroot}
@@ -36,5 +48,3 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %doc README 
 %{_bindir}/*
-
-
