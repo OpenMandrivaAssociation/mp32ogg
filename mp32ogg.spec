@@ -2,7 +2,7 @@
 
 Name:		mp32ogg
 Version:	0.11
-Release:	%mkrel 12
+Release:	%mkrel 13
 
 Summary:	Convert mp3 music files to ogg music files
 License:	Artistic
