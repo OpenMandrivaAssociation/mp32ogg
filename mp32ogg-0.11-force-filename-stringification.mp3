@@ -1,0 +1,13 @@
+--- /usr/bin/mp32ogg	2009-09-03 02:34:52.000000000 +0200
++++ mp32ogg	2009-09-09 17:53:17.000000000 +0200
+@@ -155,7 +155,9 @@
+ }
+ 
+ sub ConvertFile() {
+-	my $mp3file = shift(@_);
++    # force arg stringfication to get actual filename, not getopt::long
++    # callback
++	my $mp3file = "" . shift(@_);
+ 	my $delete = $opt_delete;
+ 	my $filename = $opt_rename;
+ 	my $lowercase = $opt_lowercase;
