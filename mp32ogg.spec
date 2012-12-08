@@ -2,7 +2,7 @@
 
 Name:		mp32ogg
 Version:	0.11
-Release:	%mkrel 14
+Release:	%mkrel 15
 
 Summary:	Convert mp3 music files to ogg music files
 License:	Artistic
@@ -48,3 +48,55 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %doc README 
 %{_bindir}/*
+
+
+%changelog
+* Wed May 04 2011 Oden Eriksson <oeriksson@mandriva.com> 0.11-14mdv2011.0
++ Revision: 666485
+- mass rebuild
+
+* Fri Dec 03 2010 Oden Eriksson <oeriksson@mandriva.com> 0.11-13mdv2011.0
++ Revision: 606658
+- rebuild
+
+* Wed Mar 17 2010 Oden Eriksson <oeriksson@mandriva.com> 0.11-12mdv2010.1
++ Revision: 523361
+- rebuilt for 2010.1
+
+* Wed Sep 09 2009 Jérôme Quelin <jquelin@mandriva.org> 0.11-11mdv2010.0
++ Revision: 435646
+- forgot to commit patch
+- fix 53477
+
+* Thu Sep 03 2009 Christophe Fergeau <cfergeau@mandriva.com> 0.11-10mdv2010.0
++ Revision: 426164
+- rebuild
+
+* Tue Jun 17 2008 Thierry Vignaud <tv@mandriva.org> 0.11-9mdv2009.0
++ Revision: 223316
+- rebuild
+
+* Tue Jan 15 2008 Thierry Vignaud <tv@mandriva.org> 0.11-7mdv2008.1
++ Revision: 153231
+- rebuild
+- kill re-definition of %%buildroot on Pixel's request
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+* Thu Aug 09 2007 Götz Waschk <waschk@mandriva.org> 0.11-6mdv2008.0
++ Revision: 60747
+- switch to the Debian fork
+
+
+* Wed Feb 21 2007 Tomasz Pawel Gajc <tpg@mandriva.org> 0.11-5mdv2007.0
++ Revision: 123640
+- rebuild
+- Import mp32ogg
+
+* Mon Sep 06 2004 Michael Scherer <misc@mandrake.org> 0.11-4mdk
+- Rebuild
+- use %%doc
+- remove Packager tag
+- use perl-autorequires
+
