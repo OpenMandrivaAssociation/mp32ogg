@@ -3,7 +3,7 @@
 Summary:	Convert mp3 music files to ogg music files
 Name:		mp32ogg
 Version:	0.11
-Release:	15
+Release:	16
 License:	Artistic
 Group:		Sound
 Url:		http://packages.debian.org/unstable/sound/mp32ogg
