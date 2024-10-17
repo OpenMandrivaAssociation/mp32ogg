@@ -6,7 +6,7 @@ Version:	0.11
 Release:	26
 License:	Artistic
 Group:		Sound
-Url:		http://packages.debian.org/unstable/sound/mp32ogg
+Url:		https://packages.debian.org/unstable/sound/mp32ogg
 Source0:	mp32ogg_%{fver}.tar.bz2
 Patch0:		mp32ogg-0.11-force-filename-stringification.mp3
 BuildArch:	noarch
